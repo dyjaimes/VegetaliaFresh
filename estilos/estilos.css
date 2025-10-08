@@ -1,0 +1,393 @@
+
+    :root{
+
+      --titulo-size: 42px; /* 36-48px */
+      --subtitulo-size: 24px;
+      --texto-size: 16px;
+      --btn-size: 18px;
+    }
+/* Que la página siempre ocupe el 100% de la altura */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* El contenido crece y empuja el footer hacia abajo */
+main {
+  flex: 1;
+}
+
+
+ body {
+  background-color: #F5F5F5;
+  color: #222;
+ font-family: "Open Sans", sans-serif;
+}
+
+ h1,h2,h3,h4,h5 { font-family: 'Poppins', sans-serif; }
+
+    h1, .brand{
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+    }
+
+    h2, .subtitle {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+    }
+
+    /* Header / Navbar */
+    .navbar-brand .logo-text{
+      color: #3B7D3B;
+      font-size: 1.5rem;
+    }
+.verMas{
+  color: #3B7D3B; font-weight: bold;
+}
+.verMas:hover{
+  color: #333; text-decoration: none;
+}
+
+p, li, a, span {
+  font-family: 'Open Sans', sans-serif;
+}
+.title{
+  font-size: 20px;
+}
+
+.btn, .logo-text {
+  font-family: 'Montserrat', sans-serif;
+}
+.btn-success {
+  background-color: #3B7D3B; 
+  border: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn-success:hover {
+  background-color: #FFEB3B;
+  color: #333;
+}
+
+
+    .hero{
+      background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)), url('https://images.pexels.com/photos/616404/pexels-photo-616404.jpeg?auto=compress&cs=tinysrgb&w=1200');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 80px 0;
+       height: 80vh; 
+    }
+    .hero h1{
+      font-size: var(--titulo-size);
+      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+     
+    }
+    .hero .cta-btn{
+      font-size: var(--btn-size);
+      background: #3B7D3B;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 8px;
+    }
+    .hero .cta-btn:hover{ background: #FFEB3B; color: #222; }
+
+
+ .hero-Nosotros{
+      background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('https://cdn.pixabay.com/photo/2015/09/21/14/24/supermarket-949913_1280.jpg?auto=compress&cs=tinysrgb&w=1200');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 80px 0;
+      min-height: 80vh;
+    }
+
+   .hero-Nosotros h1{
+      font-size: var(--titulo-size);
+      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+   
+  
+    .hero-Nosotros .cta-btn:hover{ background: #FFEB3B; color: #222; }
+
+
+/*  hero ocupa menos */
+@media (max-width: 767px) {
+  .hero {
+    height: 50vh;   
+    padding: 40px 0; 
+  }
+}
+/* Card normal, sin animación extra */
+.product-card {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+
+/* Imagen con efecto zoom */
+.product-card .product-img {
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-img {
+  transform: scale(1.08); /*  zoom  */
+}
+
+/* Quitar posición fija del carrito */
+.cart-icon {
+  position: relative;
+  top: 0;
+  right: 0;
+  z-index: auto;
+}
+
+    /* Offcanvas cart styling */
+    .offcanvas-body .cart-item img{ width: 60px; height: 60px; object-fit: cover; border-radius: 6px; }
+
+    
+    footer{
+      background: #3B7D3B;
+      color: #fff;
+      padding: 40px 0;
+      margin-top: auto;  /* esto lo pega abajo */
+    }
+    footer .derechos{
+      border-top: 1px solid #fff;
+      padding-top: 10px;
+      font-size: 0.9em;
+    }
+
+
+ 
+    /* Responsive tweaks */
+    @media (max-width: 767px){
+      :root{ --titulo-size: 30px; }
+      .product-card img{ height: 180px; }
+    }
+
+.cart-btn {
+  font-size: 1.3rem;        /* tamaño del carrito */
+  text-decoration: none;    
+  color: #333;              /* color del carrito */
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;    /* ajusta posición vertical */
+  right: -10px; /* ajusta posición horizontal */
+  background: #3B7D3B;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* Dropdown en pantallas grandes */
+@media (min-width: 992px) {
+  .navbar {
+    position: fixed !important;   /* se mantiene fijo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1030;                /* se pone por encima del contenido */
+  }
+
+  /* Para que el contenido no se oculte debajo del navbar */
+  body {
+    padding-top: 62px; /* ajusta este valor según la altura del navbar */
+  }
+
+  .navbar .dropdown-menu {
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-15px);
+    transition: all 0.3s ease;
+    margin-top: 0;
+    top: 100%;
+    left: 0;
+    position: absolute;
+  }
+
+  .navbar .nav-item.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  /* Línea debajo de la categoría al hover */
+  .navbar .nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  .navbar .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #3B7D3B !important;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+
+  .navbar .nav-item:hover .nav-link::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  .navbar .nav-link:hover {
+    color: #3B7D3B !important;
+  }
+
+  .navbar .dropdown-menu {
+    margin-top: 10px;
+  }
+
+  .navbar .nav-item:hover > .nav-link,
+  .navbar .nav-item:focus-within > .nav-link {
+    color: #3B7D3B !important;
+  }
+
+  .navbar .nav-item:hover > .nav-link::after,
+  .navbar .nav-item:focus-within > .nav-link::after {
+    background: #3B7D3B !important;
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+
+/* Menú hamburguesa en móvil como overlay */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    position: absolute;   /* se sobrepone al contenido */
+    top: 100%;            /* justo debajo del navbar */
+    left: 0;
+    width: 100%;
+    background: #fff; /* fondo blanco para diferenciarlo */
+    z-index: 9999;        /* se pone por encima */
+    padding: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+
+  /* Bootstrap oculta/abre el collapse con clases */
+  .navbar-collapse.collapse {
+    display: none !important;
+  }
+  .navbar-collapse.collapse.show {
+    display: block !important;
+  }
+}
+
+
+/* Quitar borde/outline del botón hamburguesa */
+.navbar-toggler {
+  border: none !important;       /* quita el borde por defecto */
+  box-shadow: none !important;   /* elimina la sombra */
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none !important;      /* elimina el contorno */
+  box-shadow: none !important;   /* elimina el resalte negro */
+}
+
+
+
+.categoria-intro {
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Título y texto */
+.categoria-intro h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+.categoria-intro p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+}
+
+.categoria-intro.citricas {
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                    url('../img/citricos.jpg');
+}
+.categoria-intro.citricas h1 { color: #FFD54F; } 
+
+.categoria-intro.tropicales {
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                    url('../img/tropicales.jpg');
+}
+.categoria-intro.tropicales h1 { color: #FF7043; } 
+
+.categoria-intro.exoticas {
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                    url('../img/exoticas.jpg');
+}
+.categoria-intro.exoticas h1 { color: #AB47BC; } 
+
+
+.categoria-intro.verduras {
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                    url('../img/hoja.jpeg');
+}
+.categoria-intro.verduras h1 { color: #66BB6A; } 
+
+
+.categoria-intro.tuberculos {
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                    url('../img/tuberculos.jpg');
+}
+.categoria-intro.tuberculos h1 { color: #A1887F; } 
+
+
+.categoria-intro.internacionales {
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                    url('../img/internacionales.jpg');
+}
+.categoria-intro.internacionales h1 { color: #42A5F5; } 
+
+
+.categoria-intro.combosFrutas {
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                    url('../img/comboFrutas.jpg');
+}
+.categoria-intro.combosFrutas h1 { color: #FFB74D; } 
+
+.categoria-intro.combosVerduras {
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+                    url('../img/comboVerduras.jpg');
+}
+.categoria-intro.combosVerduras h1 { color: #4DB6AC; } 
+
+
+
+
+.divisor {
+  border-top: 2px solid #3B7D3B;
+
+}

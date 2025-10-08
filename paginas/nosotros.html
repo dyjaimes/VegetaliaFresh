@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Montserrat:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+
+<!-- Importar Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <link rel="stylesheet" href="../estilos/estilos.css">
+
+
+</head>
+<body>
+
+<main>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="../index.html">
+  <svg class="d-none d-sm-inline me-2" width="36" height="36" viewBox="0 0 24 24" fill="none">
+
+        <path d="M12 2C9 4 6 6 6 9c0 4 6 7 6 11s6-3 6-7c0-3-3-5-6-11z" fill="#4CAF50"/>
+      </svg>
+      <span class="logo-text">VegetaliaFresh</span>
+    </a>
+
+
+<!-- Contenedor para carrito + hamburguesa en móvil -->
+<div class="d-flex align-items-center d-lg-none gap-4">
+  <a href="carrito.html" class="cart-btn position-relative">
+    <i class="bi bi-cart3"></i>
+    <span id="cart-count-mobile" class="cart-badge">6</span>
+  </a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</div>
+
+
+    <div class="collapse navbar-collapse" id="mainMenu">
+      <ul class="navbar-nav ms-auto align-items-lg-center">
+        <!-- Frutas -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="frutasMenu" role="button" data-bs-toggle="dropdown">Frutas</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="tropicales.html">Frutas Tropicales</a></li>
+            <li><a class="dropdown-item" href="citricas.html">Frutas Cítricas</a></li>
+          </ul>
+        </li>
+        <!-- Verduras -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="verdurasMenu" role="button" data-bs-toggle="dropdown">Verduras</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="verdurasHojas.html">Verduras de Hoja</a></li>
+            <li><a class="dropdown-item" href="tuberculos.html">Tubérculos</a></li>
+          </ul>
+        </li>
+                <!-- importadas -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="promoMenu" role="button" data-bs-toggle="dropdown">Importadas</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="exoticas.html">Frutas Exóticas</a></li>
+            <li><a class="dropdown-item" href="internacionales.html">Frutas Internacionales</a></li>
+          </ul>
+        </li>
+        <!-- Promociones -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="promoMenu" role="button" data-bs-toggle="dropdown">Promociones</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="combosFrutas.html">Combos de Frutas</a></li>
+            <li><a class="dropdown-item" href="combosVerduras.html">Combos de Verduras</a></li>
+          </ul>
+        </li>
+
+      </ul>
+
+ <!-- Botón Carrito SOLO en pantallas grandes -->
+<a href="carrito.html" class="cart-btn position-relative d-none d-lg-inline-block ms-3">
+  <i class="bi bi-cart3"></i>
+  <span id="cart-count" class="cart-badge">0</span>
+</a>
+
+    </div>
+  </div>
+</nav>
+
+<section class="hero-Nosotros d-flex align-items-center justify-content-center text-center" >
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 style="font-size:50px; color:#66BB6A;">VegetaliaFresh</h1>
+        <p class="lead mt-3" style="font-size:30px;">
+          <strong>Natural y Fresco</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!--  Sección Sobre Nosotros-->
+<section id="nosotros" class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center text-center text-md-start">
+      
+      <!-- Columna Texto -->
+      <div class="col-md-6 order-2 order-md-1">
+        <!-- Título siempre arriba -->
+        <h2 class="mb-4 text-success text-center text-md-start">Sobre Nosotros</h2>
+        
+        <!-- Imagen en el centro solo en móviles -->
+        <div class="d-md-none mb-4">
+          <img src="https://cdn.pixabay.com/photo/2012/02/28/15/46/autumn-18494_960_720.jpg" 
+               alt="Frutas frescas" 
+               class="img-fluid rounded shadow">
+        </div>
+
+        <p style="color:#333;">
+          En <strong>VegetaliaFresh</strong> nos dedicamos a llevar 
+          lo mejor de la tierra directamente a tu hogar. Promovemos la alimentación saludable 
+          con productos frescos, naturales y de la más alta calidad, apoyando a 
+          agricultores locales y fomentando la sostenibilidad.
+        </p>
+        <p style="color:#555;">
+          Nuestro compromiso es ofrecer <span>frutas tropicales</span> 
+          y <span>tradicionales</span> seleccionadas cuidadosamente, 
+          garantizando frescura y sabor en cada entrega.
+        </p>
+        <a href="contacto.html" class="btn btn-success mt-3 px-4">Contáctanos</a>
+      </div>
+
+      <!-- Columna Imagen visible en pantallas grandes -->
+      <div class="col-md-6 mb-4 mb-md-0 order-1 order-md-2 d-none d-md-block">
+        <img src="https://cdn.pixabay.com/photo/2012/02/28/15/46/autumn-18494_960_720.jpg" 
+             alt="Frutas frescas" 
+             class="img-fluid rounded shadow">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Sección Nuestra Historia -->
+<section id="historia" class="py-5 bg-white">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Imagen visible en pantallas grandes  -->
+      <div class="col-md-6 order-1 order-md-1 d-none d-md-block">
+        <img src="https://cdn.pixabay.com/photo/2012/06/21/00/48/fruits-50423_1280.jpg" 
+             alt="Historia VegetaliaFresh" 
+             class="img-fluid rounded shadow">
+      </div>
+
+      <!-- Columna Texto -->
+      <div class="col-md-6 order-2 order-md-2 text-center text-md-start">
+        <!-- Título siempre arriba -->
+        <h2 class="mb-4 text-warning text-center text-md-start">Nuestra Historia</h2>
+
+        <!-- Imagen visible en móviles -->
+        <div class="d-md-none mb-4">
+          <img src="https://cdn.pixabay.com/photo/2012/06/21/00/48/fruits-50423_1280.jpg" 
+               alt="Historia VegetaliaFresh" 
+               class="img-fluid rounded shadow">
+        </div>
+
+        
+        <p style="color:#333;">
+          <strong>VegetaliaFresh</strong> nació con el sueño de acercar los sabores auténticos 
+          de la tierra a cada familia. Desde nuestros inicios, trabajamos junto a pequeños agricultores 
+          locales, valorando su esfuerzo y tradición.
+        </p>
+        <p style="color:#555;">
+          Con el paso del tiempo, nos consolidamos como una empresa comprometida con la 
+          <span>sostenibilidad</span>, 
+          la <span>innovación</span> en la distribución 
+          y la <span>calidad</span> en cada producto.
+        </p>
+        <p style="color:#444; font-style:italic;">
+          Hoy seguimos creciendo, llevando la frescura del campo a tu mesa.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Sección Impacto Social -->
+<section id="impacto" class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Texto -->
+      <div class="col-md-6 order-2 order-md-1 text-center text-md-start">
+        <!-- Título siempre arriba -->
+        <h2 class="mb-4 text-success text-center text-md-start">Nuestro Impacto</h2>
+
+        <!-- Imagen visible en móviles -->
+        <div class="d-md-none mb-4">
+          <img src="../img/impacto.jpg" 
+               alt="Impacto social VegetaliaFresh" 
+               class="img-fluid rounded shadow">
+        </div>
+
+        <p style="color:#555;">
+          En <strong>VegetaliaFresh</strong>, creemos que el consumo responsable puede cambiar el mundo. 
+          Por eso, trabajamos con agricultores locales, reducimos empaques plásticos y fomentamos 
+          prácticas de comercio justo que beneficien tanto al productor como al consumidor.
+        </p>
+        <p style="color:#444; font-style:italic;">
+          Cada compra que realizas contribuye al bienestar de comunidades rurales y a la protección del planeta.
+        </p>
+      </div>
+
+      <!-- Imagen solo en pantallas grandes  -->
+      <div class="col-md-6 order-1 order-md-2 d-none d-md-block text-center">
+        <img src="../img/impacto.jpg" 
+             alt="Impacto social VegetaliaFresh" 
+             class="img-fluid rounded shadow">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Sección Misión y Visión -->
+<section id="mision-vision" class="py-5 bg-white">
+  <div class="container">
+    <div class="row">
+      
+      
+      <div class="col-md-6 mb-4 text-center text-md-start">
+        <h2 class="text-warning text-center mb-4">Nuestra Misión</h2>
+        <p style="color:#333;">
+          Ofrecer productos frescos, naturales y de calidad superior, 
+          promoviendo hábitos de alimentación saludable, apoyando a los 
+          agricultores locales y contribuyendo al desarrollo sostenible 
+          de la región.
+        </p>
+      </div>
+
+      
+      <div class="col-md-6 text-center text-md-start">
+        <h2 class="text-success text-center mb-4">Nuestra Visión</h2>
+        <p style="color:#333;">
+          Ser reconocidos como la tienda líder en productos frescos y 
+          sostenibles en Colombia, consolidándonos como un referente de 
+          confianza, innovación y compromiso social en el sector alimenticio.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Sección Testimonios -->
+<section id="testimonios" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-5 text-warning">Lo que dicen nuestros clientes</h2>
+    <div class="row g-4">
+
+      <!-- Testimonio 1 -->
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100 border-0 rounded-3 p-4">
+          <img src="../img/user3.jpg" alt="Cliente Laura" class="testimonial-img rounded-circle mx-auto mb-3" style="width:80px; height:80px; object-fit:cover;">
+          <h5 class="mb-0">Laura Méndez</h5>
+          <small class="text-muted">22/02/2024</small>
+          <p class="mt-2 mb-1 text-warning">★★★★★</p>
+          <p class="text-muted fst-italic">Las frutas llegaron frescas y en perfecto estado. Los precios son muy justos para la calidad que ofrecen.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100 border-0 rounded-3 p-4">
+          <img src="../img/user4.jpg" alt="Cliente Mariana" class="testimonial-img rounded-circle mx-auto mb-3" style="width:80px; height:80px; object-fit:cover;">
+          <h5 class="mb-0">Mariana Gómez</h5>
+          <small class="text-muted">01/02/2024</small>
+          <p class="mt-2 mb-1 text-warning">★★★★☆</p>
+          <p class="text-muted fst-italic">Me encantaron los combos de frutas tropicales, muy completos y a buen precio. Hubo un pequeño retraso, pero valió la pena.</p>
+        </div>
+      </div>
+
+      
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100 border-0 rounded-3 p-4">
+          <img src="../img/user2.jpg" alt="Cliente Andrés" class="testimonial-img rounded-circle mx-auto mb-3" style="width:80px; height:80px; object-fit:cover;">
+          <h5 class="mb-0">Andrés Rodríguez</h5>
+          <small class="text-muted">10/02/2024</small>
+          <p class="mt-2 mb-1 text-warning">★★★★★</p>
+          <p class="text-muted fst-italic">Excelente servicio. Compré aguacates y piñas, llegaron maduros y listos para comer. Muy recomendable.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Sección Productos Recomendados -->
+<section id="recomendados" class="py-5 bg-white">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="mb-0 text-success">Productos Recomendados</h2>
+      <!--<a href="paginas/productos.html" class="btn btn-outline-success btn-sm mt-2">Ver más</a>-->
+    </div>
+    <div class="row" id="recomendados-lista"></div>
+  </div>
+</section>
+
+
+</main>
+
+<footer >
+  <div class="container">
+    <div class="row">
+
+      <!-- Información de la empresa -->
+      <div class="col-md-6 mb-3">
+        <h5>VegetaliaFresh</h5>
+        <p>
+          Dirección: San José de Cúcuta, Colombia<br>
+          Teléfono: <a href="tel:+573001234567" class="text-white">+57 300 123 4567</a><br>
+          Email: <a href="mailto:contacto@vegetaliafresh.com" class="text-white">contacto@vegetaliafresh.com</a>
+        </p>
+      </div>
+
+      <!-- Enlaces -->
+      <div class="col-md-3 mb-3">
+        <h5>Información</h5>
+        <ul class="list-unstyled">
+          <li><a href="nosotros.html" class="text-white">Sobre nosotros</a></li>
+          <li><a href="contacto.html" class="text-white">Contáctanos</a></li>
+          <li><a href="politicasPrivacidad.html" class="text-white">Política de Privacidad</a></li>
+          <li><a href="terminosUso.html" class="text-white">Términos de uso</a></li>
+        </ul>
+      </div>
+
+      <!-- Redes sociales -->
+      <div class="col-md-3 mb-3">
+        <h5>Síguenos</h5>
+        <div class="d-flex gap-3">
+    <a href="https://www.facebook.com/merqueo" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="Merqueo en Facebook">
+      <i class="fab fa-facebook fa-lg" aria-hidden="true"></i>
+      <span class="sr-only">Merqueo en Facebook</span>
+    </a>
+    <a href="https://www.instagram.com/merqueocol/" target="_blank" rel="noopener noreferrer" class="text-white" aria-label="Merqueo en Instagram">
+      <i class="fab fa-instagram fa-lg" aria-hidden="true"></i>
+      <span class="sr-only">Merqueo en Instagram</span>
+    </a>
+    <a href="https://api.whatsapp.com/send?phone=573001234567&text=Hola%20VegetaliaFresh" 
+   target="_blank" rel="noopener noreferrer" class="text-white">
+  <i class="fab fa-whatsapp fa-lg"></i>
+     </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-4 derechos" >
+      &copy; 2025 VegetaliaFresh. Todos los derechos reservados.
+    </div>
+  </div>
+</footer>
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Incluye Font Awesome en el <head> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/formulario.js"></script>
+
+
+</body>
+</html>
