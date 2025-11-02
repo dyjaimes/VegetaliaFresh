@@ -38,16 +38,14 @@
 
 <main>
   <div class="container py-4">
-    
-
     <div class="row mt-4">
       <!-- Columna izquierda: Productos -->
       <div class="col-md-8">
         <div id="carrito-lista" class="row"></div>
 
-        <!-- Botón regresar -->
-        <div class="mt-3">
-          <a href="../index.html" class="btn btn-secondary">Continuar Comprando</a>
+        <!-- Botón visible solo en pantallas medianas y grandes -->
+        <div class="mt-3 d-none d-md-block">
+          <a href="../index.html" class="btn btn-secondary w-100">Continuar Comprando</a>
         </div>
       </div>
 
@@ -55,14 +53,30 @@
       <div class="col-md-4">
         <div class="p-3 bg-white shadow rounded">
           <h4 class="mb-3">Resumen</h4>
+
+          <!-- Nueva lista para mostrar nombres de productos -->
+          <ul id="resumen-lista" class="list-group mb-3">
+            <li class="list-group-item text-muted">No hay productos en el carrito</li>
+          </ul>
+
           <p>Total de productos: <span id="total-productos" class="fw-bold">0</span></p>
           <p>Total a pagar: <span id="total-general" class="text-success fw-bold">$0</span></p>
+
+          <!-- Botón Finalizar Compra dentro del recuadro -->
+          <button id="btn-finalizar" class="btn btn-success w-100 mt-3">
+            Finalizar compra
+          </button>
         </div>
+      </div>
+
+      <!-- Botón visible solo en pantallas pequeñas -->
+      <div class="mt-3 d-block d-md-none">
+        <a href="../index.html" class="btn btn-secondary w-100">Continuar Comprando</a>
       </div>
     </div>
   </div>
-
 </main>
+
   <!-- FOOTER -->
 <footer >
   <div class="container">

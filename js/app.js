@@ -3,17 +3,17 @@
 
 const productos = {
   // Frutas tropicales
-  mango: {id:"mango",nombre:"Mango",descripcion:"Mango de pulpa firme, dulce y aromático, perfecto para batidos y ensaladas.",precio:3500,imagen:"img/mango.jpeg",categoria:"frutas-tropicales"},
-  piña: {id:"piña",nombre:"Piña",descripcion:"Piña dulce y jugosa, rica en vitamina C y bromelina, ideal para jugos y postres.",precio:4200,imagen:"img/pina.jpeg",categoria:"frutas-tropicales"},
+  mango: {id:"mango",nombre:"Mango",descripcion:"Mango de pulpa firme, dulce y aromático, perfecto para batidos y ensaladas.",precio:3500,imagen:"img/mango.jpg",categoria:"frutas-tropicales"},
+  piña: {id:"piña",nombre:"Piña",descripcion:"Piña dulce y jugosa, rica en vitamina C y bromelina, ideal para jugos y postres.",precio:4200,imagen:"img/pina.jpg",categoria:"frutas-tropicales"},
   papaya: {id:"papaya",nombre:"Papaya",descripcion:"Papaya rica en fibra y enzimas digestivas, excelente para desayunos y postres.",precio:3000,imagen:"img/papaya.jpg",categoria:"frutas-tropicales"},
   maracuya: {id:"maracuya",nombre:"Maracuyá",descripcion:"Fruta aromática y ácida, ideal para jugos, postres y salsas.",precio:3800,imagen:"img/maracuya.jpg",categoria:"frutas-tropicales"},
-  guanabana: {id:"guanabana",nombre:"Guanábana",descripcion:"Fruta grande y dulce, perfecta para jugos, batidos y postres.",precio:4500,imagen:"img/guanabana.jpeg",categoria:"frutas-tropicales"},
+  guanabana: {id:"guanabana",nombre:"Guanábana",descripcion:"Fruta grande y dulce, perfecta para jugos, batidos y postres.",precio:4500,imagen:"img/guanabana.jpg",categoria:"frutas-tropicales"},
   lulo: {id:"lulo",nombre:"Lulo",descripcion:"Fruta cítrica y refrescante, base para jugos y postres típicos.",precio:3000,imagen:"img/lulo.jpg",categoria:"frutas-tropicales"},
   borojo: {id:"borojo",nombre:"Borojo",descripcion:"Fruta energética y nutritiva, usada en batidos y bebidas revitalizantes.",precio:5500,imagen:"img/borojo.jpg",categoria:"frutas-tropicales"},
 
   // Frutas cítricas
   naranja: {id:"naranja",nombre:"Naranja",descripcion:"Jugo natural y refrescante, alta en vitamina C, perfecta para el desayuno.",precio:2500,imagen:"img/naranja.jpg",categoria:"frutas-citricas"},
-  limon: {id:"limon",nombre:"Limón",descripcion:"Aporta acidez y aroma a platos y bebidas; excelente para conservar y marinar.",precio:1800,imagen:"img/limon.jpeg",categoria:"frutas-citricas"},
+  limon: {id:"limon",nombre:"Limón",descripcion:"Aporta acidez y aroma a platos y bebidas; excelente para conservar y marinar.",precio:1800,imagen:"img/limon.jpg",categoria:"frutas-citricas"},
   mandarina: {id:"mandarina",nombre:"Mandarina",descripcion:"Dulce, fácil de pelar y perfecta como snack saludable para toda la familia.",precio:2700,imagen:"img/mandarina.jpg",categoria:"frutas-citricas"},
   tamarillo: {id:"tamarillo",nombre:"Tamarillo",descripcion:"Fruta cítrica de pulpa dulce y ligeramente ácida, excelente para jugos y ensaladas.",precio:3200,imagen:"img/tamarindo.jpg",categoria:"frutas-citricas"},
   pomelo: {id:"pomelo",nombre:"Pomelo",descripcion:"Fruta refrescante y jugosa, rica en vitamina C, ideal para desayunos y jugos naturales.",precio:3500,imagen:"img/pomelo.jpg",categoria:"frutas-citricas"},
@@ -27,8 +27,8 @@ const productos = {
   cilantro: {id: "cilantro",nombre: "Cilantro",descripcion: "Hojas frescas y aromáticas, ideales para salsas, guisos y ensaladas.",precio: 1300,imagen: "img/cilantro.jpg",categoria:"verduras-hoja"},
 
   // Tubérculos
-  papa: {id:"papa",nombre:"Papa",descripcion:"Textura harinosa, ideal para sopas, purés y asados.",precio:1500,imagen:"img/papa-.jpeg",categoria:"tuberculos"},
-  yuca: {id:"yuca",nombre:"Yuca",descripcion:"Tubérculo energético, perfecto para frituras y sancochos familiares.",precio:1800,imagen:"img/yuca.jpeg",categoria:"tuberculos"},
+  papa: {id:"papa",nombre:"Papa",descripcion:"Textura harinosa, ideal para sopas, purés y asados.",precio:1500,imagen:"img/papa-.jpg",categoria:"tuberculos"},
+  yuca: {id:"yuca",nombre:"Yuca",descripcion:"Tubérculo energético, perfecto para frituras y sancochos familiares.",precio:1800,imagen:"img/yuca.jpg",categoria:"tuberculos"},
   zanahoria: {id:"zanahoria",nombre:"Zanahoria",descripcion:"Fuente de betacaroteno, para jugos y guarniciones saludables.",precio:2200,imagen:"img/zanahoria.jpg",categoria:"tuberculos"},
   batata: {id:"batata",nombre:"Batata",descripcion:"Tubérculo dulce y suave, ideal para postres, purés y guisos.",precio:2800,imagen:"img/batata.jpg",categoria:"tuberculos"},
   arracacha: {id: "arracacha",nombre: "Arracacha",descripcion: "Tubérculo andino de sabor dulce y textura suave, ideal para sopas, purés y guisos.",precio: 2000,imagen: "img/arracacha.jpg",categoria: "tuberculos"},
@@ -36,9 +36,9 @@ const productos = {
   // Frutas exóticas
   rambutan: {id:"rambutan",nombre:"Rambután",descripcion:"Fruta exótica de cáscara roja con espinas suaves, jugosa y dulce, rica en vitamina C.",precio:12000,imagen:"img/rambutan.jpg",categoria:"frutas-exoticas"},
   mangostan: {id:"mangostan",nombre:"Mangostán",descripcion:"Fruta morada con pulpa blanca, suave y muy dulce, considerada la reina de las frutas tropicales.",precio:15000,imagen:"img/mangostan.jpg",categoria:"frutas-exoticas"},
-  longan: {id:"longan",nombre:"Longan",descripcion:"Fruta pequeña similar al lichi, de sabor dulce y refrescante, muy consumida en Asia.",precio:10000,imagen:"img/longan.jpeg",categoria:"frutas-exoticas"},
+  longan: {id:"longan",nombre:"Longan",descripcion:"Fruta pequeña similar al lichi, de sabor dulce y refrescante, muy consumida en Asia.",precio:10000,imagen:"img/longan.jpg",categoria:"frutas-exoticas"},
   durian: {id:"durian",nombre:"Durian",descripcion:"Fruta tropical del sudeste asiático, conocida por su olor fuerte y pulpa cremosa y dulce.",precio:18000,imagen:"img/durian.jpg",categoria:"frutas-exoticas"},
-  dragonfruit: {id:"dragonfruit",nombre:"Pitahaya (Dragon Fruit)",descripcion:"Fruta de origen asiático, con pulpa blanca o roja y semillas negras, refrescante y ligeramente dulce.",precio:14000,imagen:"img/dragonfruit.jpeg",categoria:"frutas-exoticas"},
+  dragonfruit: {id:"dragonfruit",nombre:"Pitahaya (Dragon Fruit)",descripcion:"Fruta de origen asiático, con pulpa blanca o roja y semillas negras, refrescante y ligeramente dulce.",precio:14000,imagen:"img/dragonfruit.jpg",categoria:"frutas-exoticas"},
   jackfruit: {id:"jackfruit",nombre:"Jackfruit (Yaca)",descripcion:"Fruta gigante originaria de India y el sudeste asiático, con pulpa dulce y textura fibrosa, usada en platos dulces y salados.",precio:20000,imagen:"img/jackfruit.jpg",categoria:"frutas-exoticas"},
 
   // Frutas internacionales
@@ -50,7 +50,7 @@ const productos = {
 
   // Combos de frutas
 mandarina_y_piña: {id: "mandarina_y_piña",nombre: "Combo Mandarina y Piña",descripcion: "Deliciosa combinación de mandarina jugosa y piña dulce, ideal para jugos cítricos y refrescantes.",precio: 4700,imagen: "img/mandarinaypina.jpg",categoria: "combos-de-frutas"},
-banano_y_pera: {id: "banano_y_pera",nombre: "Combo Banano y Pera",descripcion: "Dúo suave y dulce de banano y pera, perfecto para snacks saludables o batidos cremosos.",precio: 4600,imagen: "img/bananoypera.jpg",categoria: "combos-de-frutas"},
+banano_y_pera: {id: "banano_y_pera",nombre: "Combo Banano y Pera",descripcion: "Dúo suave y dulce de banano y pera, perfecto para snacks saludables o batidos cremosos.",precio: 4600,imagen: "img/bananoypera.png",categoria: "combos-de-frutas"},
 piña_y_limon: {id: "piña_y_limon",nombre: "Combo Piña y Limón",descripcion: "Mezcla tropical y cítrica de piña y limón, ideal para bebidas refrescantes y digestivas.",precio: 4500,imagen: "img/pinaylimon.jpg",categoria: "combos-de-frutas"},
 
 // Combos de verduras
@@ -146,6 +146,21 @@ if (contRecomendados) {
 
 
 // Funciones carrito
+// --- Mostrar mensaje de confirmación ---
+function mostrarMensajeConfirmacion(nombreProducto) {
+  const mensaje = document.getElementById("mensaje-confirmacion");
+  if (!mensaje) return;
+
+  // Cambiar el texto del mensaje
+  mensaje.querySelector(".toast-body").innerText = `${nombreProducto} agregado al carrito.`;
+
+  mensaje.style.display = "block";
+
+  // Ocultar después de 2 segundos
+  setTimeout(() => {
+    mensaje.style.display = "none";
+  }, 2000);
+}
 
 function agregarAlCarrito(id,nombre,precio){
   const cantidad = parseInt(document.getElementById(`cantidad-${id}`).value);
@@ -155,6 +170,9 @@ function agregarAlCarrito(id,nombre,precio){
   else carrito.push({id,nombre,precio,cantidad,unidad});
   localStorage.setItem("carrito",JSON.stringify(carrito));
   actualizarContador();
+  
+  // Mostrar mensaje de confirmación con el nombre del producto
+  mostrarMensajeConfirmacion(nombre);
 }
 
 function actualizarContador(){
@@ -162,7 +180,9 @@ function actualizarContador(){
   if(document.getElementById("cart-count")) document.getElementById("cart-count").innerText = total;
   if(document.getElementById("cart-count-mobile")) document.getElementById("cart-count-mobile").innerText = total;
 }
-
+function guardarCarrito() {
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+}
 function mostrarCarrito(){
   const cont = document.getElementById("carrito-lista");
   if(!cont) return;
@@ -199,7 +219,42 @@ function mostrarCarrito(){
   });
   if(document.getElementById("total-general")) document.getElementById("total-general").innerText="$"+total;
   if(document.getElementById("total-productos")) document.getElementById("total-productos").innerText=totalProd;
+  // Actualizar resumen de productos
+const resumenLista = document.getElementById("resumen-lista");
+if (resumenLista) {
+  if (carrito.length === 0) {
+    resumenLista.innerHTML = `<li class="list-group-item text-muted">No hay productos en el carrito</li>`;
+  } else {
+    resumenLista.innerHTML = carrito.map(item => `
+      <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span>${item.nombre}</span>
+        <span class="badge bg-success rounded-pill">${item.cantidad} ${item.unidad}</span>
+      </li>
+    `).join("");
+  }
 }
+
+}
+document.addEventListener("DOMContentLoaded", () => {
+  const btnFinalizar = document.getElementById("btn-finalizar");
+  if (btnFinalizar) {
+    btnFinalizar.addEventListener("click", () => {
+      if (carrito.length === 0) {
+        alert("Tu carrito está vacío. Agrega productos antes de finalizar la compra.");
+      } else {
+        alert("✅ ¡Gracias por tu compra! Estamos procesando tu pedido.");
+        carrito = [];
+        guardarCarrito();
+        mostrarCarrito();
+
+        // Redirigir al index.html después de 1 segundo
+        setTimeout(() => {
+          window.location.href = "../index.html";
+        }, 1000);
+      }
+    });
+  }
+});
 
 function eliminarProducto(index){
   carrito.splice(index,1);
@@ -289,7 +344,26 @@ if(document.getElementById("detalle-producto")){
     }
   }
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const path = window.location.pathname.toLowerCase();
+  if (path.endsWith("carrito.html") || path.includes("/carrito")) {
+    mostrarCarrito();
+  }
+});
 
-// Mostrar carrito si contenedor existe
-if(document.getElementById("carrito-lista")) mostrarCarrito();
 
+document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('touchstart', (e) => {
+    const btn = e.target.closest('.btn-success');
+    if (btn) {
+      btn.classList.add('tocado');
+    }
+  });
+
+  document.addEventListener('touchend', (e) => {
+    const btn = e.target.closest('.btn-success');
+    if (btn) {
+      setTimeout(() => btn.classList.remove('tocado'), 300);
+    }
+  });
+});
