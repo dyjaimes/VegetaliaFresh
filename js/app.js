@@ -162,54 +162,84 @@ function mostrarMensajeConfirmacion(nombreProducto) {
   }, 2000);
 }
 
-function agregarAlCarrito(id,nombre,precio){
+function agregarAlCarrito(id, nombre, precio) {
   const cantidad = parseInt(document.getElementById(`cantidad-${id}`).value);
   const unidad = document.getElementById(`unidad-${id}`).value;
-  let item = carrito.find(p=>p.id===id && p.unidad===unidad);
-  if(item) item.cantidad += cantidad;
-  else carrito.push({id,nombre,precio,cantidad,unidad});
-  localStorage.setItem("carrito",JSON.stringify(carrito));
+
+  // Ajustar precio según unidad
+  let precioFinal = precio;
+  if (unidad === "libra") {
+    precioFinal = precio / 2; // 1 libra = 0.5 kg
+  }
+
+  // Buscar si el producto ya está en el carrito con la misma unidad
+  let item = carrito.find(p => p.id === id && p.unidad === unidad);
+  if (item) item.cantidad += cantidad;
+  else carrito.push({ id, nombre, precio: precioFinal, cantidad, unidad });
+
+  localStorage.setItem("carrito", JSON.stringify(carrito));
   actualizarContador();
-  
-  // Mostrar mensaje de confirmación con el nombre del producto
   mostrarMensajeConfirmacion(nombre);
 }
 
-function actualizarContador(){
-  const total = carrito.reduce((acc,p)=>acc+p.cantidad,0);
-  if(document.getElementById("cart-count")) document.getElementById("cart-count").innerText = total;
-  if(document.getElementById("cart-count-mobile")) document.getElementById("cart-count-mobile").innerText = total;
+
+function actualizarContador() {
+  // Contar productos únicos, no cantidad total
+  const total = carrito.length;
+
+  const cartCount = document.getElementById("cart-count");
+  const cartCountMobile = document.getElementById("cart-count-mobile");
+
+  if (cartCount) cartCount.innerText = total;
+  if (cartCountMobile) cartCountMobile.innerText = total;
 }
+
 function guardarCarrito() {
   localStorage.setItem("carrito", JSON.stringify(carrito));
 }
-function mostrarCarrito(){
+function mostrarCarrito() {
   const cont = document.getElementById("carrito-lista");
-  if(!cont) return;
+  if (!cont) return;
   cont.innerHTML = "";
-  let total=0,totalProd=0;
-  carrito.forEach((item,index)=>{
+
+  let total = 0;
+  let totalProd = 0; // Contador de productos distintos
+
+  carrito.forEach((item, index) => {
     const p = productos[item.id];
-    const subtotal = item.precio*item.cantidad;
-    total+=subtotal;
-    totalProd+=item.cantidad;
-    cont.innerHTML+=`
+    const subtotal = item.precio * item.cantidad;
+    total += subtotal;
+    totalProd++; // Contamos 1 por cada producto distinto
+
+    cont.innerHTML += `
       <div class="col-12 mb-3">
         <div class="card shadow-sm p-2">
           <div class="row g-2 align-items-center">
-            <div class="col-2"><img src="${getImgSrc(p.imagen)}"  alt="${p.nombre} " class="img-fluid rounded" style="width:100px;height:100px;object-fit:cover;cursor:pointer;" onclick="verDetalle('${p.id}')">
+            <div class="col-2">
+              <img src="${getImgSrc(p.imagen)}" alt="${p.nombre}" 
+                   class="img-fluid rounded" 
+                   style="width:100px;height:100px;object-fit:cover;cursor:pointer;" 
+                   onclick="verDetalle('${p.id}')">
             </div>
             <div class="col-6">
               <h6>${item.nombre}</h6>
-              <p class="mb-1 text-muted" style="font-size:14px;">Unidad: <strong>${item.unidad}</strong></p>
-              <p class="mb-1 text-success fw-bold" style="font-size:14px;">Precio unitario: $${item.precio}</p>
-              <p class="mb-1 text-success fw-bold" style="font-size:14px;">Subtotal: $${subtotal}</p>
+              <p class="mb-1 text-muted" style="font-size:14px;">
+                Unidad: <strong>${item.unidad}</strong>
+              </p>
+              <p class="mb-1 text-success fw-bold" style="font-size:14px;">
+                Precio unitario: $${item.precio} / ${item.unidad === "kilo" ? "Kilo" : "Libra"}
+              </p>
+              <p class="mb-1 text-success fw-bold" style="font-size:14px;">
+                Subtotal: $${subtotal}
+              </p>
             </div>
             <div class="col-4 d-flex flex-column align-items-end justify-content-between">
               <button class="btn btn-danger btn-sm mb-4" onclick="eliminarProducto(${index})">Eliminar</button>
               <div>
                 <label for="cantidad-${index}" class="form-label mb-1" style="font-size:13px;">Cantidad:</label>
-                <input id="cantidad-${index}" type="number" min="1" value="${item.cantidad}" onchange="cambiarCantidad(${index},this.value)" style="width:50px;font-size:14px;text-align:center;">
+                <input id="cantidad-${index}" type="number" min="1" value="${item.cantidad}" 
+                       onchange="cambiarCantidad(${index}, this.value)" 
+                       style="width:50px;font-size:14px;text-align:center;">
               </div>
             </div>
           </div>
@@ -217,24 +247,30 @@ function mostrarCarrito(){
       </div>
     `;
   });
-  if(document.getElementById("total-general")) document.getElementById("total-general").innerText="$"+total;
-  if(document.getElementById("total-productos")) document.getElementById("total-productos").innerText=totalProd;
+
+  // Actualizar totales
+  if (document.getElementById("total-general")) 
+    document.getElementById("total-general").innerText = "$" + total;
+
+  if (document.getElementById("total-productos")) 
+    document.getElementById("total-productos").innerText = totalProd;
+
   // Actualizar resumen de productos
-const resumenLista = document.getElementById("resumen-lista");
-if (resumenLista) {
-  if (carrito.length === 0) {
-    resumenLista.innerHTML = `<li class="list-group-item text-muted">No hay productos en el carrito</li>`;
-  } else {
-    resumenLista.innerHTML = carrito.map(item => `
-      <li class="list-group-item d-flex justify-content-between align-items-center">
-        <span>${item.nombre}</span>
-        <span class="badge bg-success rounded-pill">${item.cantidad} ${item.unidad}</span>
-      </li>
-    `).join("");
+  const resumenLista = document.getElementById("resumen-lista");
+  if (resumenLista) {
+    if (carrito.length === 0) {
+      resumenLista.innerHTML = `<li class="list-group-item text-muted">No hay productos en el carrito</li>`;
+    } else {
+      resumenLista.innerHTML = carrito.map(item => `
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+          <span>${item.nombre}</span>
+          <span class="badge bg-success rounded-pill">${item.cantidad} ${item.unidad}</span>
+        </li>
+      `).join("");
+    }
   }
 }
 
-}
 document.addEventListener("DOMContentLoaded", () => {
   const btnFinalizar = document.getElementById("btn-finalizar");
   if (btnFinalizar) {
